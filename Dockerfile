@@ -21,3 +21,9 @@ RUN apt update && apt upgrade -y && apt install -y --no-install-recommends \
 
 RUN pip3 install -q --upgrade pip numpy
 RUN pip3 install -q scikit-learn
+
+RUN apt update && apt upgrade -y && apt install -y --no-install-recommends \
+    python3-setuptools
+
+RUN pip3 install -q tensorflow-gpu keras
+RUN pip3 install -q torch torchvision
